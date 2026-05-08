@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi & Misi - Ponpes Tahfizh Modern</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purple: {
+                            900: 'rgb(var(--primary) / <alpha-value>)',
+                            700: 'rgb(var(--primary-hover) / <alpha-value>)',
+                            600: 'rgb(var(--primary-muted) / <alpha-value>)',
+                            500: 'rgb(var(--primary-soft) / <alpha-value>)',
+                            200: 'rgb(var(--primary-border) / <alpha-value>)',
+                            100: 'rgb(var(--primary-light) / <alpha-value>)',
+                            50: 'rgb(var(--primary-lightest) / <alpha-value>)',
+                        },
+                        pink: {
+                            800: 'rgb(var(--secondary-hover) / <alpha-value>)',
+                            700: 'rgb(var(--secondary) / <alpha-value>)',
+                            600: 'rgb(var(--secondary-light) / <alpha-value>)',
+                            500: 'rgb(var(--secondary-soft) / <alpha-value>)',
+                            300: 'rgb(var(--secondary-lightest) / <alpha-value>)',
+                            200: 'rgb(var(--accent-border) / <alpha-value>)',
+                            100: 'rgb(var(--accent-hover) / <alpha-value>)',
+                            50: 'rgb(var(--accent) / <alpha-value>)',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+        :root {
+            --primary: 76 29 149;
+            --primary-hover: 126 34 206;
+            --primary-muted: 147 51 234;
+            --primary-soft: 168 85 247;
+            --primary-border: 233 213 255;
+            --primary-light: 243 232 255;
+            --primary-lightest: 250 245 255;
+            --secondary: 190 24 93;
+            --secondary-hover: 157 23 77;
+            --secondary-light: 219 39 119;
+            --secondary-soft: 236 72 153;
+            --secondary-lightest: 249 168 212;
+            --accent-border: 251 207 232;
+            --accent-hover: 252 231 243;
+            --accent: 253 242 248;
+            --gradient: linear-gradient(135deg, #4c1d95 0%, #86198f 50%, #be185d 100%);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .bg-primary { background-color: rgb(var(--primary)); }
+        .text-primary { color: rgb(var(--primary)); }
+        .bg-gradient-custom { background: var(--gradient); }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <a href="../index.html" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-purple-900 rounded-lg flex items-center justify-center text-white font-bold">M</div>
+                        <span class="text-purple-900 font-extrabold text-xl tracking-tight uppercase">Ponpes Tahfizh Modern</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700 uppercase tracking-wide">
+                    <a href="../index.html" class="hover:text-purple-700 transition">Beranda</a>
+
+                    <!-- Dropdown Profil -->
+                    <div class="relative group">
+                        <button
+                            class="text-purple-700 transition flex items-center gap-1 uppercase tracking-wide font-semibold">
+                            Profil
+                            <i
+                                class="fa-solid fa-chevron-down text-[10px] opacity-70 group-hover:rotate-180 transition-transform duration-300"></i>
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                            <!-- invisible extension to prevent hover gap issue -->
+                            <div class="absolute -top-4 left-0 w-full h-4"></div>
+
+                            <div class="p-2 flex flex-col">
+                                <a href="sejarah-ponpes.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-building-columns text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">Sejarah Ponpes</span>
+                                </a>
+                                <a href="visi-misi.html"
+                                    class="px-4 py-2.5 text-sm text-purple-700 bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-bullseye"></i></div>
+                                    <span class="font-medium capitalize">Visi & Misi</span>
+                                </a>
+                                <a href="nilai-ponpes.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-gem text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">Nilai-Nilai Ponpes</span>
+                                </a>
+                                <a href="struktur-organ.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-sitemap text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">Struktur Organisasi</span>
+                                </a>
+                                <a href="pengajar.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-users text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">Pengajar (Asatidz)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown Program -->
+                    <div class="relative group">
+                        <button
+                            class="hover:text-purple-700 transition flex items-center gap-1 uppercase tracking-wide font-semibold">
+                            Program
+                            <i
+                                class="fa-solid fa-chevron-down text-[10px] opacity-70 group-hover:rotate-180 transition-transform duration-300"></i>
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                            <!-- invisible extension to prevent hover gap issue -->
+                            <div class="absolute -top-4 left-0 w-full h-4"></div>
+
+                            <div class="p-2 flex flex-col">
+                                <a href="../program/program-ponpes.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-book-quran text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">Program Ponpes</span>
+                                </a>
+                                <a href="../program/ppdb.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-file-signature text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">PPDB</span>
+                                </a>
+                                <!-- Nested Dropdown: Galeri -->
+                                <div class="relative group/nested">
+                                    <a href="#"
+                                        class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center justify-between w-full">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-6 flex justify-center"><i
+                                                    class="fa-solid fa-images text-purple-700/50"></i></div>
+                                            <span class="font-medium capitalize">Galeri</span>
+                                        </div>
+                                        <i
+                                            class="fa-solid fa-chevron-right text-[10px] opacity-50 group-hover/nested:translate-x-1 transition-transform"></i>
+                                    </a>
+
+                                    <!-- Nested Menu -->
+                                    <div
+                                        class="absolute left-full top-0 ml-1 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible -translate-x-2 group-hover/nested:translate-x-0 transition-all duration-300 pointer-events-none group-hover/nested:pointer-events-auto z-50">
+                                        <!-- Invisible extension bridge -->
+                                        <div class="absolute top-0 -left-4 w-4 h-full"></div>
+
+                                        <div class="p-2 flex flex-col">
+                                            <a href="../galeri/foto.html"
+                                                class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                                <div class="w-6 flex justify-center"><i
+                                                        class="fa-solid fa-camera text-purple-700/50"></i></div>
+                                                <span class="font-medium normal-case">Foto</span>
+                                            </a>
+                                            <a href="../galeri/video.html"
+                                                class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                                <div class="w-6 flex justify-center"><i
+                                                        class="fa-solid fa-video text-purple-700/50"></i></div>
+                                                <span class="font-medium normal-case">Video</span>
+                                            </a>
+                                            <a href="../galeri/lingkungan.html"
+                                                class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                                <div class="w-6 flex justify-center"><i
+                                                        class="fa-solid fa-leaf text-purple-700/50"></i></div>
+                                                <span class="font-medium normal-case">Lingkungan</span>
+                                            </a>
+                                            <a href="../galeri/fasilitas.html"
+                                                class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                                <div class="w-6 flex justify-center"><i
+                                                        class="fa-solid fa-building text-purple-700/50"></i></div>
+                                                <span class="font-medium normal-case">Fasilitas</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../lainnya/berita-artikel.html" class="hover:text-purple-700 transition">Berita</a>
+                    <a href="../lainnya/kontak.html" class="hover:text-purple-700 transition">Kontak</a>
+                </div>
+                <div>
+                    <a href="../program/ppdb.html" class="bg-pink-700 hover:bg-pink-800 text-white px-6 py-2.5 rounded-full text-sm font-bold transition shadow-lg shadow-pink-200">
+                        DAFTAR SEKARANG
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="relative pt-32 pb-20 bg-purple-900 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-custom opacity-30 mix-blend-multiply"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <nav class="flex justify-center gap-2 mb-6 text-purple-200 text-xs font-bold uppercase tracking-widest">
+                <a href="../index.html" class="hover:text-white transition">Beranda</a>
+                <span>/</span>
+                <a href="#" class="text-pink-400">Profil</a>
+                <span>/</span>
+                <span class="text-white">Visi Misi</span>
+            </nav>
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-6">VISI & <span class="text-pink-400">MISI</span></h1>
+            <p class="text-purple-100 max-w-2xl mx-auto text-lg leading-relaxed">
+                Menjadi mercusuar pendidikan Islam yang mencetak generasi rabbani, berwawasan luas, dan berkontribusi nyata bagi umat.
+            </p>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-purple-50 rounded-full -z-10"></div>
+                    <div class="bg-gradient-to-br from-purple-900 to-pink-800 p-12 rounded-[3rem] text-white shadow-2xl relative overflow-hidden group">
+                        <i class="fa-solid fa-eye text-8xl absolute -bottom-10 -right-10 opacity-10 group-hover:scale-110 transition-transform duration-500"></i>
+                        <h2 class="text-4xl font-black mb-8 flex items-center gap-4">
+                            <span class="w-12 h-1 bg-pink-400"></span> VISI
+                        </h2>
+                        <p class="text-2xl font-light leading-relaxed">
+                            "Menjadi lembaga pendidikan Islam unggulan yang melahirkan Hafizh Al-Quran berkarakter ulama saintis, berjiwa pemimpin, dan adaptif terhadap kemajuan zaman."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-12">
+                    <h2 class="text-4xl font-black text-gray-900 flex items-center gap-4">
+                        <span class="w-12 h-1 bg-purple-900"></span> MISI
+                    </h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-6 items-start group">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-100 flex-shrink-0 flex items-center justify-center text-purple-900 font-black group-hover:bg-purple-900 group-hover:text-white transition-colors duration-300">1</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Pendidikan Al-Quran yang Mutqin</h4>
+                                <p class="text-gray-600">Menyelenggarakan program tahfizh yang berkualitas dengan standar tajwid dan makhraj yang benar.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start group">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-100 flex-shrink-0 flex items-center justify-center text-purple-900 font-black group-hover:bg-purple-900 group-hover:text-white transition-colors duration-300">2</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Integrasi Ilmu Syar'i dan Umum</h4>
+                                <p class="text-gray-600">Memadukan kurikulum kepesantrenan dengan sains dan teknologi modern secara harmonis.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start group">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-100 flex-shrink-0 flex items-center justify-center text-purple-900 font-black group-hover:bg-purple-900 group-hover:text-white transition-colors duration-300">3</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Pembentukan Karakter Islami</h4>
+                                <p class="text-gray-600">Membina akhlakul karimah dan kemandirian santri dalam lingkungan yang islami.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start group">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-100 flex-shrink-0 flex items-center justify-center text-purple-900 font-black group-hover:bg-purple-900 group-hover:text-white transition-colors duration-300">4</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Pengembangan Potensi Diri</h4>
+                                <p class="text-gray-600">Mengembangkan minat dan bakat santri dalam bidang kepemimpinan, seni, dan olahraga.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-white pt-16 pb-8 border-t border-gray-100 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-purple-900 rounded flex items-center justify-center text-white font-bold">M</div>
+                    <span class="text-purple-900 font-extrabold text-lg tracking-tight uppercase">Ponpes Tahfizh Modern</span>
+                </div>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Lembaga pendidikan Al-Quran yang berfokus pada hafalan dan pembentukan karakter islami yang kuat di era digital.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest">Alamat</h4>
+                <div class="w-full h-32 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 relative group">
+                    <iframe src="https://maps.google.com/maps?q=Jl.%20Ciputat%20Raya,%20Kec.%20Ciputat,%20Tangerang%20Selatan,%20Banten&t=&z=14&ie=UTF8&iwloc=&output=embed" class="absolute inset-0 w-full h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest">Kontak</h4>
+                <p class="text-gray-500 text-sm mb-2"><i class="fa-solid fa-phone mr-2 text-purple-700"></i> +62 812-3456-7890</p>
+                <p class="text-gray-500 text-sm"><i class="fa-solid fa-envelope mr-2 text-purple-700"></i> ponpesmodern@gmail.com</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest">Ikuti Kami</h4>
+                <div class="flex gap-4 text-xl text-purple-900">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-100 pt-8 text-center text-gray-400 text-xs">
+            &copy; 2026 Pesantren Tahfizh Modern. Developed by Donar Azhar.
+        </div>
+    </footer>
+
+    <!-- Theme Panel & Script -->
+    <div class="fixed bottom-6 right-6 z-[100]">
+        <button onclick="toggleThemePanel()" class="w-14 h-14 bg-white/90 backdrop-blur-md rounded-full shadow-xl border border-gray-100 flex items-center justify-center text-gray-600 hover:text-primary transition-all group">
+            <i class="fa-solid fa-swatchbook text-2xl group-hover:rotate-12 transition-transform"></i>
+        </button>
+        <div id="themePanel" class="absolute bottom-full right-0 mb-4 bg-white/95 backdrop-blur-xl p-5 rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible translate-y-4 transition-all pointer-events-none w-max">
+            <div class="grid grid-cols-4 gap-4">
+                <button onclick="setTheme('purple', this)" class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#4c1d95] to-[#db2777] ring-2 ring-offset-2 ring-purple-900"></button>
+                <button onclick="setTheme('emerald', this)" class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#064e3b] to-[#10b981] ring-2 ring-offset-2 ring-transparent hover:ring-[#064e3b]"></button>
+                <button onclick="setTheme('ocean', this)" class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#1e3a8a] to-[#06b6d4] ring-2 ring-offset-2 ring-transparent hover:ring-[#1e3a8a]"></button>
+                <button onclick="setTheme('midnight', this)" class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#111827] to-[#d97706] ring-2 ring-offset-2 ring-transparent hover:ring-[#111827]"></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setTheme(theme, btn) {
+            const root = document.documentElement;
+            const themes = {
+                purple: { '--primary': '76 29 149', '--primary-hover': '126 34 206', '--secondary': '190 24 93', '--gradient': 'linear-gradient(135deg, #4c1d95 0%, #86198f 50%, #be185d 100%)' },
+                emerald: { '--primary': '6 78 59', '--primary-hover': '4 120 87', '--secondary': '15 118 110', '--gradient': 'linear-gradient(135deg, #064e3b 0%, #059669 50%, #10b981 100%)' },
+                ocean: { '--primary': '30 58 138', '--primary-hover': '29 78 216', '--secondary': '14 116 144', '--gradient': 'linear-gradient(135deg, #1e3a8a 0%, #0891b2 50%, #06b6d4 100%)' },
+                midnight: { '--primary': '17 24 39', '--primary-hover': '55 65 81', '--secondary': '180 83 9', '--gradient': 'linear-gradient(135deg, #111827 0%, #4b5563 50%, #d97706 100%)' }
+            };
+
+            const selected = themes[theme];
+            Object.keys(selected).forEach(key => root.style.setProperty(key, selected[key]));
+            if (btn) {
+                btn.parentElement.querySelectorAll('button').forEach(b => b.classList.replace('ring-purple-900', 'ring-transparent'));
+                btn.classList.replace('ring-transparent', 'ring-purple-900');
+            }
+        }
+
+        function toggleThemePanel() {
+            const panel = document.getElementById('themePanel');
+            panel.classList.toggle('opacity-0');
+            panel.classList.toggle('invisible');
+            panel.classList.toggle('translate-y-4');
+            panel.classList.toggle('pointer-events-none');
+        }
+    </script>
+</body>
+</html>

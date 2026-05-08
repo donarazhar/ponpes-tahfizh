@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesantren Tahfizh Modern</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purple: {
+                            900: 'rgb(var(--primary) / <alpha-value>)',
+                            700: 'rgb(var(--primary-hover) / <alpha-value>)',
+                            600: 'rgb(var(--primary-muted) / <alpha-value>)',
+                            500: 'rgb(var(--primary-soft) / <alpha-value>)',
+                            200: 'rgb(var(--primary-border) / <alpha-value>)',
+                            100: 'rgb(var(--primary-light) / <alpha-value>)',
+                            50: 'rgb(var(--primary-lightest) / <alpha-value>)',
+                        },
+                        pink: {
+                            800: 'rgb(var(--secondary-hover) / <alpha-value>)',
+                            700: 'rgb(var(--secondary) / <alpha-value>)',
+                            600: 'rgb(var(--secondary-light) / <alpha-value>)',
+                            500: 'rgb(var(--secondary-soft) / <alpha-value>)',
+                            300: 'rgb(var(--secondary-lightest) / <alpha-value>)',
+                            200: 'rgb(var(--accent-border) / <alpha-value>)',
+                            100: 'rgb(var(--accent-hover) / <alpha-value>)',
+                            50: 'rgb(var(--accent) / <alpha-value>)',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+        :root {
+            --primary: 76 29 149;
+            --primary-hover: 126 34 206;
+            --primary-muted: 147 51 234;
+            --primary-soft: 168 85 247;
+            --primary-border: 233 213 255;
+            --primary-light: 243 232 255;
+            --primary-lightest: 250 245 255;
+            --secondary: 190 24 93;
+            --secondary-hover: 157 23 77;
+            --secondary-light: 219 39 119;
+            --secondary-soft: 236 72 153;
+            --secondary-lightest: 249 168 212;
+            --accent-border: 251 207 232;
+            --accent-hover: 252 231 243;
+            --accent: 253 242 248;
+            --gradient: linear-gradient(135deg, #4c1d95 0%, #86198f 50%, #be185d 100%);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        /* Custom Utility Classes */
+        .bg-primary {
+            background-color: rgb(var(--primary));
+        }
+
+        .text-primary {
+            color: rgb(var(--primary));
+        }
+
+        .border-primary {
+            border-color: rgb(var(--primary));
+        }
+
+        .bg-secondary {
+            background-color: rgb(var(--secondary));
+        }
+
+        .text-secondary {
+            color: rgb(var(--secondary));
+        }
+
+        .bg-gradient-custom {
+            background: var(--gradient);
+        }
+
+        .hover-bg-primary:hover {
+            background-color: rgb(var(--primary));
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <div
+                        class="w-10 h-10 bg-purple-900 rounded-lg flex items-center justify-center text-white font-bold">
+                        M</div>
+                    <span class="text-purple-900 font-extrabold text-xl tracking-tight uppercase">Ponpes Tahfizh
+                        Modern</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700 uppercase tracking-wide">
+                    <a href="#heroCarousel" class="hover:text-purple-700 transition">Beranda</a>
+
+                    <!-- Dropdown Profil -->
+                    <div class="relative group">
+                        <button
+                            class="hover:text-purple-700 transition flex items-center gap-1 uppercase tracking-wide font-semibold">
+                            Profil
+                            <i
+                                class="fa-solid fa-chevron-down text-[10px] opacity-70 group-hover:rotate-180 transition-transform duration-300"></i>
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                            <!-- invisible extension to prevent hover gap issue -->
+                            <div class="absolute -top-4 left-0 w-full h-4"></div>
+
+                            <div class="p-2 flex flex-col">
+                                <a href="profile/sejarah-ponpes.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-building-columns text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">Sejarah Ponpes</span>
+                                </a>
+                                <a href="profile/visi-misi.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-bullseye text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">Visi & Misi</span>
+                                </a>
+                                <a href="profile/nilai-ponpes.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-gem text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">Nilai-Nilai Ponpes</span>
+                                </a>
+                                <a href="profile/struktur-organ.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-sitemap text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">Struktur Organisasi</span>
+                                </a>
+                                <a href="profile/pengajar.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-users text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">Pengajar (Asatidz)</span>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown Program -->
+                    <div class="relative group">
+                        <button
+                            class="hover:text-purple-700 transition flex items-center gap-1 uppercase tracking-wide font-semibold">
+                            Program
+                            <i
+                                class="fa-solid fa-chevron-down text-[10px] opacity-70 group-hover:rotate-180 transition-transform duration-300"></i>
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                            <!-- invisible extension to prevent hover gap issue -->
+                            <div class="absolute -top-4 left-0 w-full h-4"></div>
+
+                            <div class="p-2 flex flex-col">
+                                <a href="program/program-ponpes.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-book-quran text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">Program Ponpes</span>
+                                </a>
+                                <a href="program/ppdb.html"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-file-signature text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">PPDB</span>
+                                </a>
+                                <!-- Nested Dropdown: Galeri -->
+                                <div class="relative group/nested">
+                                    <a href="#"
+                                        class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center justify-between w-full">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-6 flex justify-center"><i
+                                                    class="fa-solid fa-images text-purple-700/50"></i></div>
+                                            <span class="font-medium capitalize">Galeri</span>
+                                        </div>
+                                        <i
+                                            class="fa-solid fa-chevron-right text-[10px] opacity-50 group-hover/nested:translate-x-1 transition-transform"></i>
+                                    </a>
+
+                                    <!-- Nested Menu -->
+                                    <div
+                                        class="absolute left-full top-0 ml-1 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible -translate-x-2 group-hover/nested:translate-x-0 transition-all duration-300 pointer-events-none group-hover/nested:pointer-events-auto z-50">
+                                        <!-- Invisible extension bridge -->
+                                        <div class="absolute top-0 -left-4 w-4 h-full"></div>
+
+                                        <div class="p-2 flex flex-col">
+                                            <a href="galeri/foto.html"
+                                                class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                                <div class="w-6 flex justify-center"><i
+                                                        class="fa-solid fa-camera text-purple-700/50"></i></div>
+                                                <span class="font-medium normal-case">Foto</span>
+                                            </a>
+                                            <a href="galeri/video.html"
+                                                class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                                <div class="w-6 flex justify-center"><i
+                                                        class="fa-solid fa-video text-purple-700/50"></i></div>
+                                                <span class="font-medium normal-case">Video</span>
+                                            </a>
+                                            <a href="galeri/lingkungan.html"
+                                                class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                                <div class="w-6 flex justify-center"><i
+                                                        class="fa-solid fa-leaf text-purple-700/50"></i></div>
+                                                <span class="font-medium normal-case">Lingkungan</span>
+                                            </a>
+                                            <a href="galeri/fasilitas.html"
+                                                class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                                <div class="w-6 flex justify-center"><i
+                                                        class="fa-solid fa-building text-purple-700/50"></i></div>
+                                                <span class="font-medium normal-case">Fasilitas</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#program"
+                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                    <div class="w-6 flex justify-center"><i
+                                            class="fa-solid fa-hand-holding-heart text-purple-700/50"></i></div>
+                                    <span class="font-medium capitalize">Donasi</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="lainnya/berita-artikel.html" class="hover:text-purple-700 transition">Berita & Artikel</a>
+                    <a href="lainnya/kontak.html" class="hover:text-purple-700 transition">Kontak</a>
+                </div>
+                <div>
+                    <a href="#ppdb"
+                        class="bg-pink-700 hover:bg-pink-800 text-white px-6 py-2.5 rounded-full text-sm font-bold transition shadow-lg shadow-pink-200">
+                        DAFTAR SEKARANG
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Theme Panel -->
+    <div class="fixed bottom-6 right-6 z-[100]">
+        <!-- Floating Button -->
+        <button onclick="toggleThemePanel()"
+            class="w-14 h-14 bg-white/90 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 flex items-center justify-center text-gray-600 hover:text-primary hover:bg-gray-50 transition-all cursor-pointer relative z-10 group"
+            title="Ubah Tema Visual">
+            <i
+                class="fa-solid fa-swatchbook text-2xl group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300"></i>
+        </button>
+
+        <!-- Panel (Dropdown/Popout) -->
+        <div id="themePanel"
+            class="absolute bottom-full right-0 mb-4 bg-white/95 backdrop-blur-xl p-5 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] border border-gray-100 opacity-0 invisible translate-y-4 transition-all duration-300 pointer-events-none transform origin-bottom-right w-max">
+            <div class="flex items-center gap-2 mb-4 pb-3 border-b border-gray-100">
+                <i class="fa-solid fa-wand-magic-sparkles text-primary text-lg"></i>
+                <h3 class="text-xs font-black text-gray-800 uppercase tracking-widest">Tema Visual</h3>
+            </div>
+            <div class="grid grid-cols-4 gap-4">
+                <button onclick="setTheme('purple', this)"
+                    class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#4c1d95] to-[#db2777] ring-2 ring-offset-2 ring-purple-900 hover:scale-110 transition-transform shadow-sm"
+                    title="Purple"></button>
+                <button onclick="setTheme('emerald', this)"
+                    class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#064e3b] to-[#10b981] ring-2 ring-offset-2 ring-transparent hover:ring-[#064e3b] hover:scale-110 transition-transform shadow-sm"
+                    title="Emerald"></button>
+                <button onclick="setTheme('ocean', this)"
+                    class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#1e3a8a] to-[#06b6d4] ring-2 ring-offset-2 ring-transparent hover:ring-[#1e3a8a] hover:scale-110 transition-transform shadow-sm"
+                    title="Ocean"></button>
+                <button onclick="setTheme('midnight', this)"
+                    class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#111827] to-[#d97706] ring-2 ring-offset-2 ring-transparent hover:ring-[#111827] hover:scale-110 transition-transform shadow-sm"
+                    title="Midnight"></button>
+                <button onclick="setTheme('sunset', this)"
+                    class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#7c2d12] to-[#f43f5e] ring-2 ring-offset-2 ring-transparent hover:ring-[#7c2d12] hover:scale-110 transition-transform shadow-sm"
+                    title="Sunset"></button>
+                <button onclick="setTheme('crimson', this)"
+                    class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#881337] to-[#ef4444] ring-2 ring-offset-2 ring-transparent hover:ring-[#881337] hover:scale-110 transition-transform shadow-sm"
+                    title="Crimson"></button>
+                <button onclick="setTheme('royal', this)"
+                    class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#312e81] to-[#8b5cf6] ring-2 ring-offset-2 ring-transparent hover:ring-[#312e81] hover:scale-110 transition-transform shadow-sm"
+                    title="Royal"></button>
+                <button onclick="setTheme('forest', this)"
+                    class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#14532d] to-[#84cc16] ring-2 ring-offset-2 ring-transparent hover:ring-[#14532d] hover:scale-110 transition-transform shadow-sm"
+                    title="Forest"></button>
+            </div>
+        </div>
+    </div>
+
+    <section id="heroCarousel"
+        class="relative min-h-[600px] md:min-h-[800px] flex items-center justify-center overflow-hidden">
+        <!-- Slide 1 -->
+        <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-100 z-10">
+            <div class="absolute inset-0 bg-gray-200 flex items-center justify-center">
+                <i class="fa-solid fa-image text-8xl text-gray-400"></i>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 z-0">
+            <div class="absolute inset-0 bg-gray-200 flex items-center justify-center">
+                <i class="fa-solid fa-image text-8xl text-gray-400"></i>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 z-0">
+            <div class="absolute inset-0 bg-gray-200 flex items-center justify-center">
+                <i class="fa-solid fa-image text-8xl text-gray-400"></i>
+            </div>
+        </div>
+
+        <!-- Static Overlay for Aesthetics -->
+        <div class="absolute inset-0 bg-gray-900/10 z-20 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-custom opacity-20 mix-blend-multiply z-20 pointer-events-none"></div>
+
+        <!-- Navigation Arrow Buttons -->
+        <button onclick="prevSlide()"
+            class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 text-white backdrop-blur-sm transition-all border border-white/10 hover:scale-110">
+            <i class="fa-solid fa-chevron-left text-xl"></i>
+        </button>
+        <button onclick="nextSlideManual()"
+            class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 text-white backdrop-blur-sm transition-all border border-white/10 hover:scale-110">
+            <i class="fa-solid fa-chevron-right text-xl"></i>
+        </button>
+
+        <!-- Slider Controls -->
+        <div class="absolute bottom-20 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+            <button onclick="goToSlide(0)"
+                class="w-12 h-1.5 rounded-full bg-white transition-all shadow-md slide-dot"></button>
+            <button onclick="goToSlide(1)"
+                class="w-12 h-1.5 rounded-full bg-white/40 hover:bg-white/60 transition-all shadow-md slide-dot"></button>
+            <button onclick="goToSlide(2)"
+                class="w-12 h-1.5 rounded-full bg-white/40 hover:bg-white/60 transition-all shadow-md slide-dot"></button>
+        </div>
+
+        <!-- Bottom Wave -->
+        <div class="absolute bottom-0 left-0 right-0 z-30 transform translate-y-1">
+            <svg viewBox="0 0 1440 120" class="fill-gray-50 w-full h-auto drop-shadow-md">
+                <path
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- PROFIL SECTION -->
+    <section id="profil" class="py-24 bg-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">PROFIL <span
+                        class="text-purple-700">PESANTREN</span></h2>
+                <div class="w-24 h-1 bg-pink-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Sejarah & Visi Misi</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        Pondok Pesantren Tahfizh Modern didirikan dengan semangat untuk mencetak generasi Qur'ani yang
+                        tidak hanya hafal Al-Quran, tetapi juga menguasai ilmu pengetahuan sains dan teknologi modern
+                        agar mampu bersaing di kancah global.
+                    </p>
+                    <ul class="space-y-4 mt-6">
+                        <li class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                            <i class="fa-solid fa-eye text-pink-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Visi</h4>
+                                <p class="text-gray-600 text-sm mt-1">Menjadi lembaga pendidikan rujukan dalam mencetak
+                                    ulama saintis masa depan.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                            <i class="fa-solid fa-bullseye text-pink-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Misi</h4>
+                                <p class="text-gray-600 text-sm mt-1">Menyelenggarakan pendidikan Islam terpadu yang
+                                    berhaluan Ahlussunnah wal Jamaah dan berwawasan global.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div
+                        class="rounded-2xl shadow-lg h-64 w-full bg-gray-200 relative overflow-hidden transition-transform hover:scale-105">
+                        <i
+                            class="fa-solid fa-image absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl text-gray-400"></i>
+                    </div>
+                    <div
+                        class="rounded-2xl shadow-lg h-64 w-full mt-8 bg-gray-200 relative overflow-hidden transition-transform hover:scale-105">
+                        <i
+                            class="fa-solid fa-image absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Asatidz Preview -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Jajaran Asatidz & Pengajar</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div
+                        class="bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all group">
+                        <div
+                            class="w-24 h-24 mx-auto bg-gray-200 rounded-full mb-4 overflow-hidden border-4 border-white shadow-md flex items-center justify-center">
+                            <i class="fa-solid fa-user-tie text-4xl text-gray-400"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 group-hover:text-purple-700">Kyai H. Ahmad, Lc, MA</h4>
+                        <p class="text-xs text-gray-500 mt-1 uppercase tracking-widest">Pimpinan Pondok</p>
+                    </div>
+                    <div
+                        class="bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all group">
+                        <div
+                            class="w-24 h-24 mx-auto bg-gray-200 rounded-full mb-4 overflow-hidden border-4 border-white shadow-md flex items-center justify-center">
+                            <i class="fa-solid fa-user text-4xl text-gray-400"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 group-hover:text-purple-700">Ust. Budi Santoso, S.Pd</h4>
+                        <p class="text-xs text-gray-500 mt-1 uppercase tracking-widest">Kepala Kepengasuhan</p>
+                    </div>
+                    <div
+                        class="bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all group">
+                        <div
+                            class="w-24 h-24 mx-auto bg-gray-200 rounded-full mb-4 overflow-hidden border-4 border-white shadow-md flex items-center justify-center">
+                            <i class="fa-solid fa-user-graduate text-4xl text-gray-400"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 group-hover:text-purple-700">Ust. Abdullah, Al-Hafizh</h4>
+                        <p class="text-xs text-gray-500 mt-1 uppercase tracking-widest">Mudir Tahfizh</p>
+                    </div>
+                    <div
+                        class="bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all group">
+                        <div
+                            class="w-24 h-24 mx-auto bg-gray-200 rounded-full mb-4 overflow-hidden border-4 border-white shadow-md flex items-center justify-center">
+                            <i class="fa-solid fa-chalkboard-user text-4xl text-gray-400"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 group-hover:text-purple-700">Ust. Hasan, M.Kom</h4>
+                        <p class="text-xs text-gray-500 mt-1 uppercase tracking-widest">Kepala Sekolah Modern</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM & PPDB SECTION -->
+    <section id="program" class="py-24 bg-gray-50 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">PROGRAM <span
+                        class="text-pink-700">PENDIDIKAN</span></h2>
+                <div class="w-24 h-1 bg-purple-900 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div
+                    class="bg-white p-8 rounded-3xl shadow-lg border border-purple-100 relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110">
+                    </div>
+                    <i class="fa-solid fa-mosque text-4xl text-purple-700 relative z-10 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 relative z-10">Tahfizh Reguler</h3>
+                    <p class="text-gray-600 relative z-10">Program hafalan Al-Quran 30 juz berjenjang selama 6 tahun
+                        khusus untuk lulusan SD/MI.</p>
+                </div>
+
+                <div
+                    class="bg-gradient-custom p-8 rounded-3xl shadow-xl text-white relative overflow-hidden group transform hover:-translate-y-2 transition-all">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110">
+                    </div>
+                    <i class="fa-solid fa-crown text-4xl text-pink-300 relative z-10 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-3 relative z-10">Takhassus (Akselerasi)</h3>
+                    <p class="text-white/80 relative z-10">Program intensif hafalan 30 juz dalam waktu 2 tahun khusus
+                        bagi lulusan SMP/MTs yang berdedikasi tinggi.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-3xl shadow-lg border border-purple-100 relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-pink-50 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110">
+                    </div>
+                    <i class="fa-solid fa-laptop-code text-4xl text-pink-700 relative z-10 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 relative z-10">IT & Bahasa</h3>
+                    <p class="text-gray-600 relative z-10">Ekskul unggulan penguasaan Bahasa Arab, Inggris, serta
+                        literasi digital dan programming dasar.</p>
+                </div>
+            </div>
+
+            <!-- PPDB Banner -->
+            <div id="ppdb"
+                class="bg-purple-900 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between text-white border-4 border-purple-800/50 scroll-mt-24 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl"></div>
+                <div class="mb-6 md:mb-0 max-w-xl relative z-10">
+                    <span
+                        class="bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">PPDB
+                        2026/2027</span>
+                    <h3 class="text-3xl md:text-4xl font-extrabold mb-3">Penerimaan Santri Baru</h3>
+                    <p class="text-purple-200 text-lg">Bergabunglah bersama ribuan santri lainnya untuk merajut masa
+                        depan yang cemerlang dengan akhlakul karimah.</p>
+                </div>
+                <div class="flex flex-col gap-3 w-full md:w-auto relative z-10">
+                    <button
+                        class="bg-white text-purple-900 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 hover:scale-105 transition-all shadow-[0_10px_30px_rgba(0,0,0,0.3)] text-center w-full whitespace-nowrap">
+                        <i class="fa-solid fa-file-pen mr-2"></i> Daftar Online Sekarang
+                    </button>
+                    <button
+                        class="bg-transparent border-2 border-white/30 text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 hover:border-white transition-all text-center w-full">
+                        Unduh Brosur PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="berita" class="py-20 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-gray-900">BERITA TERBARU</h2>
+                    <p class="text-gray-500 mt-2">Update kegiatan dan informasi terkini pesantren</p>
+                </div>
+                <a href="#" class="text-purple-700 font-bold hover:underline">Lihat Semua Berita</a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="bg-white rounded-2xl shadow-xl shadow-gray-200/50 overflow-hidden group hover:-translate-y-2 transition duration-300">
+                    <div class="h-56 bg-gray-200 overflow-hidden relative">
+                        <div
+                            class="absolute top-4 left-4 bg-purple-900 text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase">
+                            Kegiatan</div>
+                        <i
+                            class="fa-solid fa-image absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gray-400 font-bold">23 MEI 2026</span>
+                        <h3 class="text-xl font-bold mt-2 text-gray-900 group-hover:text-purple-700 transition">
+                            Khataman Quran Bulanan & Doa Bersama</h3>
+                        <p class="text-gray-600 mt-3 text-sm line-clamp-3">Momen haru saat santri menyelesaikan setoran
+                            hafalan bulanan yang dihadiri oleh seluruh wali santri...</p>
+                        <button
+                            class="mt-6 text-pink-700 font-extrabold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                            BACA SELENGKAPNYA <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl shadow-xl shadow-gray-200/50 overflow-hidden group hover:-translate-y-2 transition duration-300 border-2 border-purple-100">
+                    <div class="h-56 bg-gray-200 overflow-hidden relative">
+                        <div
+                            class="absolute top-4 left-4 bg-pink-700 text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase">
+                            Akademik</div>
+                        <i
+                            class="fa-solid fa-image absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gray-400 font-bold">15 MEI 2026</span>
+                        <h3 class="text-xl font-bold mt-2 text-gray-900 group-hover:text-purple-700 transition">
+                            Penerimaan Santri Baru Gelombang II</h3>
+                        <p class="text-gray-600 mt-3 text-sm line-clamp-3">Telah dibuka pendaftaran untuk gelombang
+                            kedua dengan kuota terbatas. Segera amankan kursi Anda...</p>
+                        <button
+                            class="mt-6 text-pink-700 font-extrabold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                            BACA SELENGKAPNYA <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl shadow-xl shadow-gray-200/50 overflow-hidden group hover:-translate-y-2 transition duration-300">
+                    <div class="h-56 bg-gray-200 overflow-hidden relative">
+                        <div
+                            class="absolute top-4 left-4 bg-purple-900 text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase">
+                            Event</div>
+                        <i
+                            class="fa-solid fa-image absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gray-400 font-bold">10 MEI 2026</span>
+                        <h3 class="text-xl font-bold mt-2 text-gray-900 group-hover:text-purple-700 transition">
+                            Kunjungan Syekh Dari Mesir</h3>
+                        <p class="text-gray-600 mt-3 text-sm line-clamp-3">Meningkatkan kualitas sanad tahfizh santri
+                            melalui pelatihan intensif bersama tamu kehormatan...</p>
+                        <button
+                            class="mt-6 text-pink-700 font-extrabold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                            BACA SELENGKAPNYA <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex justify-between items-end mb-12 border-b border-gray-100 pb-6">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">EKSPLORASI <span
+                            class="text-purple-700">KEGIATAN</span></h2>
+                    <p class="text-gray-500 mt-2">Informasi harian dan prestasi santri Pesantren Maa Pak Zahru</p>
+                </div>
+                <a href="#"
+                    class="hidden md:block text-pink-700 font-bold hover:text-purple-900 transition flex items-center gap-2">
+                    LIHAT SEMUA ARSIP <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                <div class="lg:col-span-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-2 h-8 bg-pink-600 rounded-full"></span>
+                        <h3 class="text-xl font-bold text-gray-800">Berita Terbaru</h3>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="group cursor-pointer">
+                            <div class="relative h-64 bg-gray-200 rounded-2xl overflow-hidden mb-4 shadow-lg">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                    <span class="text-white text-sm font-medium">Klik untuk membaca lebih lanjut</span>
+                                </div>
+                                <div
+                                    class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-purple-900 text-[10px] px-3 py-1 rounded-lg font-black uppercase">
+                                    Utama</div>
+                                <i
+                                    class="fa-solid fa-image absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl text-gray-300 group-hover:scale-110 transition-transform"></i>
+                            </div>
+                            <span class="text-pink-600 font-bold text-xs uppercase tracking-widest">Kajian Islam</span>
+                            <h4
+                                class="text-xl font-extrabold text-gray-900 mt-2 group-hover:text-purple-700 transition">
+                                Bedah Kitab Kuning Bersama Alumni Al-Azhar Kairo</h4>
+                            <p class="text-gray-500 mt-3 text-sm leading-relaxed line-clamp-2">Meningkatkan pemahaman
+                                literatur klasik di kalangan santri tingkat akhir sebagai bekal dakwah...</p>
+                        </div>
+
+                        <div class="group cursor-pointer">
+                            <div
+                                class="relative h-64 bg-gray-200 rounded-2xl overflow-hidden mb-4 shadow-lg border border-gray-100">
+                                <div
+                                    class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-purple-900 text-[10px] px-3 py-1 rounded-lg font-black uppercase">
+                                    Prestasi</div>
+                                <i
+                                    class="fa-solid fa-image absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl text-gray-300 group-hover:scale-110 transition-transform"></i>
+                            </div>
+                            <span class="text-pink-600 font-bold text-xs uppercase tracking-widest">Tahfizh</span>
+                            <h4
+                                class="text-xl font-extrabold text-gray-900 mt-2 group-hover:text-purple-700 transition">
+                                Selamat! 5 Santri Berhasil Menghafal 30 Juz dalam 1 Tahun</h4>
+                            <p class="text-gray-500 mt-3 text-sm leading-relaxed line-clamp-2">Metode karantina tahfizh
+                                terbukti efektif mempercepat hafalan santri dengan kualitas tajwid yang mumpuni...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-4">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-2 h-8 bg-purple-900 rounded-full"></span>
+                        <h3 class="text-xl font-bold text-gray-800">Populer Minggu Ini</h3>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4 group cursor-pointer">
+                            <div
+                                class="flex-shrink-0 w-20 h-20 bg-purple-50 rounded-xl flex items-center justify-center text-purple-200 overflow-hidden relative border border-purple-100">
+                                <i class="fa-solid fa-bolt text-xl"></i>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <h5
+                                    class="text-sm font-bold text-gray-900 group-hover:text-pink-700 transition leading-snug">
+                                    Jadwal Puasa Sunnah & Iftar Jama'i Bulan Ini</h5>
+                                <div class="flex items-center gap-3 mt-1">
+                                    <span class="text-[10px] text-gray-400"><i class="fa-regular fa-clock mr-1"></i> 2
+                                        Jam yang lalu</span>
+                                    <span class="text-[10px] text-purple-600 font-bold uppercase">Update</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 group cursor-pointer">
+                            <div
+                                class="flex-shrink-0 w-20 h-20 bg-purple-50 rounded-xl flex items-center justify-center text-purple-200 overflow-hidden relative border border-purple-100">
+                                <i class="fa-solid fa-star text-xl"></i>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <h5
+                                    class="text-sm font-bold text-gray-900 group-hover:text-pink-700 transition leading-snug">
+                                    Tips Menghafal Al-Quran Tanpa Mudah Lupa (Mutqin)</h5>
+                                <div class="flex items-center gap-3 mt-1">
+                                    <span class="text-[10px] text-gray-400"><i class="fa-regular fa-eye mr-1"></i>
+                                        1.2k Views</span>
+                                    <span class="text-[10px] text-purple-600 font-bold uppercase">Tips</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 group cursor-pointer">
+                            <div
+                                class="flex-shrink-0 w-20 h-20 bg-purple-50 rounded-xl flex items-center justify-center text-purple-200 overflow-hidden relative border border-purple-100">
+                                <i class="fa-solid fa-video text-xl"></i>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <h5
+                                    class="text-sm font-bold text-gray-900 group-hover:text-pink-700 transition leading-snug">
+                                    Vlog Kegiatan Santri: Dari Tahajud Hingga Sekolah</h5>
+                                <div class="flex items-center gap-3 mt-1">
+                                    <span class="text-[10px] text-gray-400"><i class="fa-regular fa-clock mr-1"></i> 1
+                                        Hari yang lalu</span>
+                                    <span class="text-[10px] text-purple-600 font-bold uppercase">Multimedia</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 group cursor-pointer">
+                            <div
+                                class="flex-shrink-0 w-20 h-20 bg-purple-50 rounded-xl flex items-center justify-center text-purple-200 overflow-hidden relative border border-purple-100">
+                                <i class="fa-solid fa-user-group text-xl"></i>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <h5
+                                    class="text-sm font-bold text-gray-900 group-hover:text-pink-700 transition leading-snug">
+                                    Penerimaan Santri Baru: Prosedur Tes & Wawancara</h5>
+                                <div class="flex items-center gap-3 mt-1">
+                                    <span class="text-[10px] text-gray-400"><i class="fa-regular fa-eye mr-1"></i> 850
+                                        Views</span>
+                                    <span class="text-[10px] text-purple-600 font-bold uppercase">Informasi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="mt-10 p-6 bg-gradient-to-br from-purple-900 to-pink-800 rounded-2xl text-white shadow-xl shadow-purple-200">
+                        <p class="text-xs font-bold opacity-80 uppercase tracking-widest">E-Magazine</p>
+                        <h4 class="text-lg font-bold mt-1">Unduh Profil Pesantren 2026 (PDF)</h4>
+                        <button
+                            class="mt-4 w-full bg-white text-purple-900 py-2 rounded-lg font-bold text-sm hover:bg-pink-100 transition">
+                            DOWNLOAD SEKARANG
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeri" class="py-20 bg-purple-50 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">DOKUMENTASI <span
+                        class="text-pink-700">VIDEO</span></h2>
+                <p class="text-gray-500 mt-2 max-w-2xl mx-auto">Saksikan cuplikan harian, murottal santri, dan kegiatan
+                    inspiratif lainnya di kanal YouTube resmi kami.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <div class="lg:col-span-2">
+                    <div class="relative group shadow-2xl rounded-3xl overflow-hidden bg-black aspect-video">
+                        <iframe class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/VIDEO_ID_UTAMA" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-bold text-purple-900">Profil Singkat Pesantren Tahfizh Modern T.A
+                            2026/2027</h3>
+                        <p class="text-gray-600 mt-2 text-sm">Video profil yang menjelaskan fasilitas, kurikulum, dan
+                            keseharian santri dalam menghafal Al-Quran.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-1 space-y-6">
+
+                    <div class="group cursor-pointer">
+                        <div
+                            class="relative aspect-video bg-gray-200 rounded-2xl overflow-hidden mb-3 border-2 border-transparent group-hover:border-pink-600 transition-all">
+                            <iframe class="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/VIDEO_ID_2" title="YouTube video player"
+                                frameborder="0">
+                            </iframe>
+                        </div>
+                        <h4 class="text-sm font-bold text-gray-800 line-clamp-2">Murottal Merdu Santri - Surat Al-Mulk
+                        </h4>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div
+                            class="relative aspect-video bg-gray-200 rounded-2xl overflow-hidden mb-3 border-2 border-transparent group-hover:border-pink-600 transition-all">
+                            <iframe class="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/VIDEO_ID_3" title="YouTube video player"
+                                frameborder="0">
+                            </iframe>
+                        </div>
+                        <h4 class="text-sm font-bold text-gray-800 line-clamp-2">Keseruan Outbound Santri di Puncak
+                            Bogor</h4>
+                    </div>
+
+                    <a href="#"
+                        class="flex items-center justify-center gap-3 w-full py-4 bg-white border-2 border-purple-200 rounded-2xl text-purple-900 font-bold hover:bg-purple-900 hover:text-white transition duration-300 shadow-sm">
+                        <i class="fa-brands fa-youtube text-2xl text-red-600"></i> KUNJUNGI YOUTUBE KAMI
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">SIAPKAH ANDA MENJADI GENERASI QUR'ANI?</h2>
+            <p class="text-gray-400 mb-10 max-w-2xl mx-auto">Mulailah perjalanan spiritual dan pendidikan terbaik
+                bersama kami di Pesantren Tahfizh Modern.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#"
+                    class="bg-pink-700 hover:bg-pink-800 px-10 py-4 rounded-xl font-bold transition">DAFTAR
+                    SEKARANG</a>
+                <a href="https://wa.me/xxx"
+                    class="bg-green-600 hover:bg-green-700 px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> TANYA VIA WHATSAPP
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500">
+        </div>
+    </section>
+
+    <footer id="kontak" class="bg-white pt-16 pb-8 border-t border-gray-100 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-purple-900 rounded flex items-center justify-center text-white font-bold">M
+                    </div>
+                    <span class="text-purple-900 font-extrabold text-lg tracking-tight uppercase">Ponpes Tahfizh
+                        Modern</span>
+                </div>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Lembaga pendidikan Al-Quran yang berfokus pada hafalan dan pembentukan karakter islami yang kuat di
+                    era digital.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest">Alamat</h4>
+                <div
+                    class="w-full h-32 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 relative group">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Jl.%20Ciputat%20Raya,%20Kec.%20Ciputat,%20Tangerang%20Selatan,%20Banten&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                        class="absolute inset-0 w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest">Kontak</h4>
+                <p class="text-gray-500 text-sm mb-2"><i class="fa-solid fa-phone mr-2 text-purple-700"></i> +62
+                    812-3456-7890</p>
+                <p class="text-gray-500 text-sm"><i class="fa-solid fa-envelope mr-2 text-purple-700"></i>
+                    ponpesmodern@gmail.com</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest">Ikuti Kami</h4>
+                <div class="flex gap-4 text-xl text-purple-900">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-100 pt-8 text-center text-gray-400 text-xs">
+            &copy; 2026 Pesantren Tahfizh Modern. Developed by Donar Azhar.
+        </div>
+    </footer>
+    <script>
+        function setTheme(theme, btn) {
+            const root = document.documentElement;
+
+            const themes = {
+                purple: {
+                    '--primary': '76 29 149',
+                    '--primary-hover': '126 34 206',
+                    '--primary-muted': '147 51 234',
+                    '--primary-soft': '168 85 247',
+                    '--primary-border': '233 213 255',
+                    '--primary-light': '243 232 255',
+                    '--primary-lightest': '250 245 255',
+                    '--secondary': '190 24 93',
+                    '--secondary-hover': '157 23 77',
+                    '--secondary-light': '219 39 119',
+                    '--secondary-soft': '236 72 153',
+                    '--secondary-lightest': '249 168 212',
+                    '--accent-border': '251 207 232',
+                    '--accent-hover': '252 231 243',
+                    '--accent': '253 242 248',
+                    '--gradient': 'linear-gradient(135deg, #4c1d95 0%, #86198f 50%, #be185d 100%)'
+                },
+                emerald: {
+                    '--primary': '6 78 59',
+                    '--primary-hover': '4 120 87',
+                    '--primary-muted': '5 150 105',
+                    '--primary-soft': '16 185 129',
+                    '--primary-border': '167 243 208',
+                    '--primary-light': '209 250 229',
+                    '--primary-lightest': '236 253 245',
+                    '--secondary': '15 118 110',
+                    '--secondary-hover': '17 94 89',
+                    '--secondary-light': '13 148 136',
+                    '--secondary-soft': '20 184 166',
+                    '--secondary-lightest': '94 234 212',
+                    '--accent-border': '153 246 228',
+                    '--accent-hover': '204 251 241',
+                    '--accent': '240 253 250',
+                    '--gradient': 'linear-gradient(135deg, #064e3b 0%, #059669 50%, #10b981 100%)'
+                },
+                ocean: {
+                    '--primary': '30 58 138',
+                    '--primary-hover': '29 78 216',
+                    '--primary-muted': '37 99 235',
+                    '--primary-soft': '59 130 246',
+                    '--primary-border': '191 219 254',
+                    '--primary-light': '219 234 254',
+                    '--primary-lightest': '239 246 255',
+                    '--secondary': '14 116 144',
+                    '--secondary-hover': '21 94 117',
+                    '--secondary-light': '8 145 178',
+                    '--secondary-soft': '6 182 212',
+                    '--secondary-lightest': '103 232 249',
+                    '--accent-border': '165 243 252',
+                    '--accent-hover': '207 250 254',
+                    '--accent': '236 254 255',
+                    '--gradient': 'linear-gradient(135deg, #1e3a8a 0%, #0891b2 50%, #06b6d4 100%)'
+                },
+                midnight: {
+                    '--primary': '17 24 39',
+                    '--primary-hover': '55 65 81',
+                    '--primary-muted': '75 85 99',
+                    '--primary-soft': '107 114 128',
+                    '--primary-border': '229 231 235',
+                    '--primary-light': '243 244 246',
+                    '--primary-lightest': '249 250 251',
+                    '--secondary': '180 83 9',
+                    '--secondary-hover': '146 64 14',
+                    '--secondary-light': '217 119 6',
+                    '--secondary-soft': '245 158 11',
+                    '--secondary-lightest': '252 211 77',
+                    '--accent-border': '253 230 138',
+                    '--accent-hover': '254 243 199',
+                    '--accent': '255 251 235',
+                    '--gradient': 'linear-gradient(135deg, #111827 0%, #4b5563 50%, #d97706 100%)'
+                },
+                sunset: {
+                    '--primary': '124 45 18',
+                    '--primary-hover': '194 65 12',
+                    '--primary-muted': '234 88 12',
+                    '--primary-soft': '249 115 22',
+                    '--primary-border': '254 215 170',
+                    '--primary-light': '255 237 213',
+                    '--primary-lightest': '255 247 237',
+                    '--secondary': '190 18 60',
+                    '--secondary-hover': '159 18 57',
+                    '--secondary-light': '225 29 72',
+                    '--secondary-soft': '244 63 94',
+                    '--secondary-lightest': '253 164 175',
+                    '--accent-border': '254 205 211',
+                    '--accent-hover': '255 228 230',
+                    '--accent': '255 241 242',
+                    '--gradient': 'linear-gradient(135deg, #7c2d12 0%, #be123c 50%, #f43f5e 100%)'
+                },
+                crimson: {
+                    '--primary': '136 19 55',
+                    '--primary-hover': '190 18 60',
+                    '--primary-muted': '225 29 72',
+                    '--primary-soft': '244 63 94',
+                    '--primary-border': '254 205 211',
+                    '--primary-light': '255 228 230',
+                    '--primary-lightest': '255 241 242',
+                    '--secondary': '185 28 28',
+                    '--secondary-hover': '153 27 27',
+                    '--secondary-light': '220 38 38',
+                    '--secondary-soft': '239 68 68',
+                    '--secondary-lightest': '252 165 165',
+                    '--accent-border': '254 202 202',
+                    '--accent-hover': '254 226 226',
+                    '--accent': '254 242 242',
+                    '--gradient': 'linear-gradient(135deg, #881337 0%, #b91c1c 50%, #ef4444 100%)'
+                },
+                royal: {
+                    '--primary': '49 46 129',
+                    '--primary-hover': '67 56 202',
+                    '--primary-muted': '79 70 229',
+                    '--primary-soft': '99 102 241',
+                    '--primary-border': '199 210 254',
+                    '--primary-light': '224 231 255',
+                    '--primary-lightest': '238 242 255',
+                    '--secondary': '109 40 217',
+                    '--secondary-hover': '91 33 182',
+                    '--secondary-light': '124 58 237',
+                    '--secondary-soft': '139 92 246',
+                    '--secondary-lightest': '196 181 253',
+                    '--accent-border': '221 214 254',
+                    '--accent-hover': '237 233 254',
+                    '--accent': '245 243 255',
+                    '--gradient': 'linear-gradient(135deg, #312e81 0%, #6d28d9 50%, #8b5cf6 100%)'
+                },
+                forest: {
+                    '--primary': '20 83 45',
+                    '--primary-hover': '21 128 61',
+                    '--primary-muted': '22 163 74',
+                    '--primary-soft': '34 197 94',
+                    '--primary-border': '187 247 208',
+                    '--primary-light': '220 252 231',
+                    '--primary-lightest': '240 253 244',
+                    '--secondary': '77 124 15',
+                    '--secondary-hover': '63 98 18',
+                    '--secondary-light': '101 163 13',
+                    '--secondary-soft': '132 204 22',
+                    '--secondary-lightest': '217 249 157',
+                    '--accent-border': '217 249 157',
+                    '--accent-hover': '236 252 203',
+                    '--accent': '247 254 231',
+                    '--gradient': 'linear-gradient(135deg, #14532d 0%, #4d7c0f 50%, #84cc16 100%)'
+                }
+            };
+
+            const selected = themes[theme];
+            Object.keys(selected).forEach(key => {
+                root.style.setProperty(key, selected[key]);
+            });
+
+            // Update ring focus pada tombol yang aktif
+            if (btn) {
+                btn.parentElement.querySelectorAll('button').forEach(b => b.classList.replace('ring-purple-900',
+                    'ring-transparent'));
+                btn.classList.replace('ring-transparent', 'ring-purple-900');
+            }
+        }
+
+        function toggleThemePanel() {
+            const panel = document.getElementById('themePanel');
+            panel.classList.toggle('opacity-0');
+            panel.classList.toggle('invisible');
+            panel.classList.toggle('translate-y-4');
+            panel.classList.toggle('pointer-events-none');
+        }
+
+        // Hero Slider Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.slide-dot');
+        let slideInterval;
+
+        function showSlide(index) {
+            if (!slides.length) return;
+
+            // Hide current
+            slides[currentSlide].classList.replace('opacity-100', 'opacity-0');
+            slides[currentSlide].classList.replace('z-10', 'z-0');
+            dots[currentSlide].classList.replace('bg-white', 'bg-white/40');
+
+            currentSlide = index;
+
+            // Show new
+            slides[currentSlide].classList.replace('opacity-0', 'opacity-100');
+            slides[currentSlide].classList.replace('z-0', 'z-10');
+            dots[currentSlide].classList.replace('bg-white/40', 'bg-white');
+            dots[currentSlide].classList.remove('hover:bg-white/60');
+
+            // Add hover back to others
+            dots.forEach((dot, i) => {
+                if (i !== currentSlide) dot.classList.add('hover:bg-white/60');
+            });
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            resetInterval();
+        }
+
+        function nextSlide() {
+            showSlide((currentSlide + 1) % slides.length);
+        }
+
+        function nextSlideManual() {
+            nextSlide();
+            resetInterval();
+        }
+
+        function prevSlide() {
+            showSlide((currentSlide - 1 + slides.length) % slides.length);
+            resetInterval();
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        // Start auto slide
+        if (slides.length > 0) {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+    </script>
+
+</body>
+
+</html>
