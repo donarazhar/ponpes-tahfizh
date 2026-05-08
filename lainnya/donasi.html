@@ -4,88 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Video - Ponpes Tahfizh Modern</title>
+    <title>Donasi & Wakaf - Pondok Pesantren Tahfizh Modern</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        purple: {
-                            900: 'rgb(var(--primary) / <alpha-value>)',
-                            700: 'rgb(var(--primary-hover) / <alpha-value>)',
-                            600: 'rgb(var(--primary-muted) / <alpha-value>)',
-                            500: 'rgb(var(--primary-soft) / <alpha-value>)',
-                            200: 'rgb(var(--primary-border) / <alpha-value>)',
-                            100: 'rgb(var(--primary-light) / <alpha-value>)',
-                            50: 'rgb(var(--primary-lightest) / <alpha-value>)',
-                        },
-                        pink: {
-                            800: 'rgb(var(--secondary-hover) / <alpha-value>)',
-                            700: 'rgb(var(--secondary) / <alpha-value>)',
-                            600: 'rgb(var(--secondary-light) / <alpha-value>)',
-                            500: 'rgb(var(--secondary-soft) / <alpha-value>)',
-                            300: 'rgb(var(--secondary-lightest) / <alpha-value>)',
-                            200: 'rgb(var(--accent-border) / <alpha-value>)',
-                            100: 'rgb(var(--accent-hover) / <alpha-value>)',
-                            50: 'rgb(var(--accent) / <alpha-value>)',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
-
-        :root {
-            --primary: 76 29 149;
-            --primary-hover: 126 34 206;
-            --primary-muted: 147 51 234;
-            --primary-soft: 168 85 247;
-            --primary-border: 233 213 255;
-            --primary-light: 243 232 255;
-            --primary-lightest: 250 245 255;
-            --secondary: 190 24 93;
-            --secondary-hover: 157 23 77;
-            --secondary-light: 219 39 119;
-            --secondary-soft: 236 72 153;
-            --secondary-lightest: 249 168 212;
-            --accent-border: 251 207 232;
-            --accent-hover: 252 231 243;
-            --accent: 253 242 248;
-            --gradient: linear-gradient(135deg, #4c1d95 0%, #86198f 50%, #be185d 100%);
-        }
-
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            transition: all 0.3s ease;
         }
 
-        .bg-primary { background-color: rgb(var(--primary)); }
-        .text-primary { color: rgb(var(--primary)); }
-        .bg-gradient-custom { background: var(--gradient); }
-
-        .video-card {
-            transition: all 0.4s ease;
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, #4c1d95 0%, #db2777 100%);
         }
-        .video-card:hover {
-            transform: scale(1.02);
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
 
 <body class="bg-gray-50">
 
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-purple-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-2">
-                    <a href="../index.html" class="flex items-center gap-2">
-                        <div class="w-10 h-10 bg-purple-900 rounded-lg flex items-center justify-center text-white font-bold">M</div>
-                        <span class="text-purple-900 font-extrabold text-xl tracking-tight uppercase">Ponpes Tahfizh Modern</span>
-                    </a>
+                    <div
+                        class="w-10 h-10 bg-purple-900 rounded-lg flex items-center justify-center text-white font-bold">
+                        M</div>
+                    <span class="text-purple-900 font-extrabold text-xl tracking-tight uppercase">Ponpes Tahfizh Modern</span>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700 uppercase tracking-wide">
                     <a href="../index.html" class="hover:text-purple-700 transition">Beranda</a>
@@ -171,10 +122,10 @@
                                 <!-- Nested Dropdown: Galeri -->
                                 <div class="relative group/nested">
                                     <a href="#"
-                                        class="px-4 py-2.5 text-sm text-purple-700 bg-purple-50 rounded-lg transition-colors flex items-center justify-between w-full">
+                                        class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center justify-between w-full">
                                         <div class="flex items-center gap-3">
                                             <div class="w-6 flex justify-center"><i
-                                                    class="fa-solid fa-images"></i></div>
+                                                    class="fa-solid fa-images text-purple-700/50"></i></div>
                                             <span class="font-medium capitalize">Galeri</span>
                                         </div>
                                         <i
@@ -188,25 +139,25 @@
                                         <div class="absolute top-0 -left-4 w-4 h-full"></div>
 
                                         <div class="p-2 flex flex-col">
-                                            <a href="foto.html"
+                                            <a href="../galeri/foto.html"
                                                 class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
                                                 <div class="w-6 flex justify-center"><i
                                                         class="fa-solid fa-camera text-purple-700/50"></i></div>
                                                 <span class="font-medium normal-case">Foto</span>
                                             </a>
-                                            <a href="video.html"
-                                                class="px-4 py-2.5 text-sm text-purple-700 bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                            <a href="../galeri/video.html"
+                                                class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
                                                 <div class="w-6 flex justify-center"><i
-                                                        class="fa-solid fa-video"></i></div>
+                                                        class="fa-solid fa-video text-purple-700/50"></i></div>
                                                 <span class="font-medium normal-case">Video</span>
                                             </a>
-                                            <a href="lingkungan.html"
+                                            <a href="../galeri/lingkungan.html"
                                                 class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
                                                 <div class="w-6 flex justify-center"><i
                                                         class="fa-solid fa-leaf text-purple-700/50"></i></div>
                                                 <span class="font-medium normal-case">Lingkungan</span>
                                             </a>
-                                            <a href="fasilitas.html"
+                                            <a href="../galeri/fasilitas.html"
                                                 class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
                                                 <div class="w-6 flex justify-center"><i
                                                         class="fa-solid fa-building text-purple-700/50"></i></div>
@@ -216,20 +167,21 @@
                                     </div>
                                 </div>
 
-                                <a href="../lainnya/donasi.html"
-                                    class="px-4 py-2.5 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
+                                <a href="donasi.html"
+                                    class="px-4 py-2.5 text-sm text-purple-700 bg-purple-50 rounded-lg transition-colors flex items-center gap-3">
                                     <div class="w-6 flex justify-center"><i
-                                            class="fa-solid fa-hand-holding-heart text-purple-700/50"></i></div>
+                                            class="fa-solid fa-hand-holding-heart"></i></div>
                                     <span class="font-medium capitalize">Donasi</span>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <a href="../lainnya/berita-artikel.html" class="hover:text-purple-700 transition">Berita</a>
-                    <a href="../lainnya/kontak.html" class="hover:text-purple-700 transition">Kontak</a>
+                    <a href="berita-artikel.html" class="hover:text-purple-700 transition">Berita</a>
+                    <a href="kontak.html" class="hover:text-purple-700 transition">Kontak</a>
                 </div>
                 <div>
-                    <a href="../program/ppdb.html" class="bg-pink-700 hover:bg-pink-800 text-white px-6 py-2.5 rounded-full text-sm font-bold transition shadow-lg shadow-pink-200">
+                    <a href="../program/ppdb.html"
+                        class="bg-pink-700 hover:bg-pink-800 text-white px-6 py-2.5 rounded-full text-sm font-bold transition shadow-lg shadow-pink-200">
                         DAFTAR SEKARANG
                     </a>
                 </div>
@@ -241,72 +193,129 @@
     <header class="relative pt-32 pb-20 bg-purple-900 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-custom opacity-30 mix-blend-multiply"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-black text-white mb-6">GALERI <span class="text-pink-400">VIDEO</span></h1>
+            <nav class="flex justify-center gap-2 mb-6 text-purple-200 text-xs font-bold uppercase tracking-widest">
+                <a href="../index.html" class="hover:text-white transition">Beranda</a>
+                <span>/</span>
+                <a href="#" class="text-pink-400">Program</a>
+                <span>/</span>
+                <span class="text-white">Donasi</span>
+            </nav>
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-6">DONASI <span class="text-pink-400">& WAKAF</span>
+            </h1>
             <p class="text-purple-100 max-w-2xl mx-auto text-lg leading-relaxed">
-                Dokumentasi video kegiatan dan profil pesantren kami.
+                Salurkan amal jariyah Anda untuk mendukung pendidikan para penghafal Al-Quran dan pembangunan fasilitas
+                pesantren.
             </p>
         </div>
     </header>
 
-    <!-- Video Grid -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Video Item -->
-                <div class="video-card bg-gray-50 rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 group cursor-pointer">
-                    <div class="aspect-video bg-gray-200 relative flex items-center justify-center">
-                        <i class="fa-solid fa-play text-5xl text-purple-900 opacity-50 group-hover:opacity-100 transition-opacity"></i>
-                        <div class="absolute bottom-4 right-4 bg-black/60 text-white text-[10px] font-bold px-3 py-1 rounded-full">03:45</div>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-lg font-black text-gray-900 mb-2">Profil Ponpes Tahfizh Modern 2026</h4>
-                        <p class="text-gray-500 text-xs">Mengenal lebih dekat lingkungan dan sistem pendidikan kami.</p>
+    <!-- Donation Content -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Donation Info Card -->
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="bg-gray-50 rounded-[2.5rem] p-8 md:p-12 border border-gray-100">
+                        <h2 class="text-3xl font-black text-gray-900 mb-6">Mengapa Berdonasi?</h2>
+                        <p class="text-gray-600 leading-relaxed mb-8">
+                            Setiap rupiah yang Anda infakkan akan menjadi butiran pahala yang terus mengalir. Donasi Anda
+                            digunakan untuk mendukung operasional pendidikan, beasiswa santri yatim/dhuafa, serta
+                            pengembangan sarana ibadah dan belajar di Pondok Pesantren Tahfizh Modern.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="flex gap-4 p-6 bg-white rounded-2xl border border-purple-100 shadow-sm">
+                                <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-700 flex-shrink-0">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1">Beasiswa Tahfizh</h3>
+                                    <p class="text-sm text-gray-500">Mendukung santri berprestasi yang kurang mampu.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-6 bg-white rounded-2xl border border-purple-100 shadow-sm">
+                                <div class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center text-pink-700 flex-shrink-0">
+                                    <i class="fa-solid fa-mosque"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1">Wakaf Bangunan</h3>
+                                    <p class="text-sm text-gray-500">Pembangunan masjid, asrama, dan ruang kelas.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-6 bg-white rounded-2xl border border-purple-100 shadow-sm">
+                                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-700 flex-shrink-0">
+                                    <i class="fa-solid fa-utensils"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1">Operasional Santri</h3>
+                                    <p class="text-sm text-gray-500">Kebutuhan pangan dan kesehatan santri sehari-hari.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-6 bg-white rounded-2xl border border-purple-100 shadow-sm">
+                                <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-700 flex-shrink-0">
+                                    <i class="fa-solid fa-book-open"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1">Pengadaan Al-Quran</h3>
+                                    <p class="text-sm text-gray-500">Penyediaan mushaf standar tahfizh bagi santri baru.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="video-card bg-gray-50 rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 group cursor-pointer">
-                    <div class="aspect-video bg-gray-200 relative flex items-center justify-center">
-                        <i class="fa-solid fa-play text-5xl text-purple-900 opacity-50 group-hover:opacity-100 transition-opacity"></i>
+
+                <!-- Payment Info Sidebar -->
+                <div class="space-y-8">
+                    <div class="bg-gradient-custom rounded-[2.5rem] p-8 text-white shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6">Rekening Donasi</h3>
+                        <div class="space-y-6">
+                            <div class="bg-white/10 p-6 rounded-2xl border border-white/20">
+                                <div class="flex justify-between items-start mb-4">
+                                    <img src="https://upload.wikimedia.org/wikipedia/id/thumb/5/55/BNI_logo.svg/1200px-BNI_logo.svg.png" alt="BNI" class="h-6 object-contain brightness-0 invert">
+                                    <span class="text-xs font-bold bg-white/20 px-2 py-1 rounded">BNI SYARIAH</span>
+                                </div>
+                                <div class="text-lg font-mono tracking-wider mb-2">1234 5678 90</div>
+                                <div class="text-sm opacity-80 uppercase tracking-widest">A.N Yayasan Tahfizh Modern</div>
+                            </div>
+
+                            <div class="bg-white/10 p-6 rounded-2xl border border-white/20">
+                                <div class="flex justify-between items-start mb-4">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Bank_Mandiri_logo_2016.svg/2560px-Bank_Mandiri_logo_2016.svg.png" alt="Mandiri" class="h-6 object-contain brightness-0 invert">
+                                    <span class="text-xs font-bold bg-white/20 px-2 py-1 rounded">MANDIRI</span>
+                                </div>
+                                <div class="text-lg font-mono tracking-wider mb-2">0987 6543 21</div>
+                                <div class="text-sm opacity-80 uppercase tracking-widest">A.N Yayasan Tahfizh Modern</div>
+                            </div>
+
+                            <div class="pt-4 border-t border-white/20">
+                                <p class="text-sm opacity-90 mb-4 italic text-center">
+                                    *Mohon konfirmasi setelah melakukan transfer melalui WhatsApp.
+                                </p>
+                                <a href="https://wa.me/628123456789" class="block w-full bg-white text-purple-900 py-4 rounded-2xl font-bold text-center hover:bg-purple-50 transition shadow-lg">
+                                    <i class="fa-brands fa-whatsapp mr-2"></i> Konfirmasi Donasi
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-8">
-                        <h4 class="text-lg font-black text-gray-900 mb-2">Kegiatan Ekstrakurikuler Berkuda</h4>
-                        <p class="text-gray-500 text-xs">Aksi santri dalam melatih ketangkasan berkuda.</p>
+                    
+                    <div class="bg-purple-50 rounded-[2.5rem] p-8 border border-purple-100">
+                        <h3 class="text-xl font-bold text-purple-900 mb-4">Butuh Bantuan?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Jika Anda memiliki pertanyaan mengenai program wakaf atau ingin berdonasi dalam bentuk barang, silakan hubungi kami.
+                        </p>
+                        <a href="kontak.html" class="text-purple-700 font-bold hover:underline">Hubungi Layanan Donasi &rarr;</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer ... same ... -->
-    <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12 mb-12">
-            <div class="col-span-1">
-                <div class="flex items-center gap-2 mb-6">
-                    <div class="w-8 h-8 bg-purple-900 rounded flex items-center justify-center text-white font-bold">M</div>
-                    <span class="text-purple-900 font-extrabold text-lg tracking-tight uppercase">Ponpes Tahfizh Modern</span>
-                </div>
-                <p class="text-gray-500 text-sm leading-relaxed">
-                    Lembaga pendidikan Al-Quran yang berfokus pada hafalan dan pembentukan karakter islami yang kuat di era digital.
-                </p>
-            </div>
-            <div>
-                <h4 class="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest">Alamat</h4>
-                <p class="text-gray-500 text-sm">Jl. Ciputat Raya No. 123, Banten 15412</p>
-            </div>
-            <div>
-                <h4 class="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest">Kontak</h4>
-                <p class="text-gray-500 text-sm">+62 812-3456-7890</p>
-            </div>
-            <div>
-                <h4 class="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest">Ikuti Kami</h4>
-                <div class="flex gap-4 text-xl text-purple-900">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="border-t border-gray-100 pt-8 text-center text-gray-400 text-xs">
-            &copy; 2026 Pesantren Tahfizh Modern. Developed by Donar Azhar.
-        </div>
+    <!-- Footer (Simplified) -->
+    <footer class="py-12 bg-gray-900 text-white text-center">
+        <p class="opacity-50 text-sm tracking-widest uppercase">&copy; 2026 Ponpes Tahfizh Modern. All Rights Reserved.</p>
     </footer>
+
 </body>
+
 </html>
