@@ -60,7 +60,7 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            transition: all 0.3s ease;
+            
         }
 
         .bg-primary { background-color: rgb(var(--primary)); }
@@ -236,24 +236,60 @@
             </div>
         </div>
 
+                </nav>
         <!-- Mobile Menu Overlay -->
         <div id="mobileMenu"
-            class="fixed inset-0 bg-purple-900/95 backdrop-blur-xl z-[60] flex flex-col items-center justify-center transition-all duration-500 opacity-0 invisible translate-x-full">
-            <button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white focus:outline-none">
+            class="fixed top-0 left-0 w-full h-[100dvh] bg-purple-900/95 backdrop-blur-xl z-[60] flex flex-col transition-all duration-500 opacity-0 invisible translate-x-full overflow-y-auto">
+            <button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white focus:outline-none z-[70]">
                 <i class="fa-solid fa-xmark text-3xl"></i>
             </button>
-            <div class="flex flex-col items-center gap-8 text-white text-xl font-bold uppercase tracking-widest">
-                <a href="../index.html" class="hover:text-pink-400 transition">Beranda</a>
-                <a href="../profile/sejarah-ponpes.html" class="hover:text-pink-400 transition">Profil</a>
-                <a href="../program/program-ponpes.html" class="hover:text-pink-400 transition">Program</a>
-                <a href="../lainnya/donasi.html" class="hover:text-pink-400 transition">Donasi</a>
-                <a href="../lainnya/berita-artikel.html" class="hover:text-pink-400 transition">Berita</a>
-                <a href="../lainnya/kontak.html" class="hover:text-pink-400 transition">Kontak</a>
-                <a href="../program/ppdb.html" onclick="toggleMobileMenu()"
-                    class="mt-4 bg-pink-700 px-8 py-4 rounded-full text-sm shadow-2xl">DAFTAR SEKARANG</a>
+            <div class="flex flex-col items-center mt-24 mb-10 gap-6 text-white text-lg font-bold uppercase tracking-widest w-full px-6">
+                <a href="../index.html" class="hover:text-pink-400 transition w-full text-center py-2">Beranda</a>
+                
+                <!-- Mobile Dropdown Profil -->
+                <div class="w-full flex flex-col items-center">
+                    <button onclick="toggleSubmenu('mobileProfil')" class="hover:text-pink-400 transition flex items-center justify-center gap-2 w-full py-2">
+                        Profil <i class="fa-solid fa-chevron-down text-sm transition-transform" id="icon-mobileProfil"></i>
+                    </button>
+                    <div id="mobileProfil" class="hidden flex-col items-center gap-4 mt-4 w-full bg-purple-800/50 py-4 rounded-xl normal-case text-base tracking-normal">
+                        <a href="../profile/sejarah-ponpes.html" class="hover:text-pink-300">Sejarah Ponpes</a>
+                        <a href="../profile/visi-misi.html" class="hover:text-pink-300">Visi & Misi</a>
+                        <a href="../profile/nilai-ponpes.html" class="hover:text-pink-300">Nilai-Nilai Ponpes</a>
+                        <a href="../profile/struktur-organ.html" class="hover:text-pink-300">Struktur Organisasi</a>
+                        <a href="../profile/pengajar.html" class="hover:text-pink-300">Pengajar (Asatidz)</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Dropdown Program -->
+                <div class="w-full flex flex-col items-center">
+                    <button onclick="toggleSubmenu('mobileProgram')" class="hover:text-pink-400 transition flex items-center justify-center gap-2 w-full py-2">
+                        Program <i class="fa-solid fa-chevron-down text-sm transition-transform" id="icon-mobileProgram"></i>
+                    </button>
+                    <div id="mobileProgram" class="hidden flex-col items-center gap-4 mt-4 w-full bg-purple-800/50 py-4 rounded-xl normal-case text-base tracking-normal">
+                        <a href="../program/program-ponpes.html" class="hover:text-pink-300">Program Ponpes</a>
+                        <a href="../program/ppdb.html" class="hover:text-pink-300">PPDB</a>
+                        <!-- Mobile Nested Dropdown Galeri -->
+                        <div class="w-full flex flex-col items-center">
+                            <button onclick="toggleSubmenu('mobileGaleri')" class="hover:text-pink-300 transition flex items-center justify-center gap-2 w-full">
+                                Galeri <i class="fa-solid fa-chevron-down text-sm transition-transform" id="icon-mobileGaleri"></i>
+                            </button>
+                            <div id="mobileGaleri" class="hidden flex-col items-center gap-3 mt-3 w-[90%] bg-purple-700/50 py-3 rounded-xl">
+                                <a href="../galeri/foto.html" class="hover:text-pink-200">Foto</a>
+                                <a href="../galeri/video.html" class="hover:text-pink-200">Video</a>
+                                <a href="../galeri/lingkungan.html" class="hover:text-pink-200">Lingkungan</a>
+                                <a href="../galeri/fasilitas.html" class="hover:text-pink-200">Fasilitas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="../lainnya/donasi.html" class="hover:text-pink-400 transition w-full text-center py-2">Donasi</a>
+                <a href="../lainnya/berita-artikel.html" class="hover:text-pink-400 transition w-full text-center py-2">Berita</a>
+                <a href="../lainnya/kontak.html" class="hover:text-pink-400 transition w-full text-center py-2">Kontak</a>
+                <a href="../program/ppdb.html" class="mt-4 bg-pink-700 px-8 py-4 rounded-full text-sm shadow-2xl hover:bg-pink-600 transition">DAFTAR SEKARANG</a>
             </div>
         </div>
-    </nav>
+    
 
     <!-- Page Header -->
     <header class="relative pt-32 pb-20 bg-purple-900 overflow-hidden">
